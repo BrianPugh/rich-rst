@@ -33,9 +33,10 @@ from rich.rule import Rule
 from pygments.lexers import guess_lexer
 from pygments.util import ClassNotFound
 
+from ._version import __version__
+
 __all__ = ("RST", "ReStructuredText", "reStructuredText", "RestructuredText")
 __author__ = "Arian Mollik Wasi (aka. Wasi Master)"
-__version__ = "1.2.0"
 
 install()
 
