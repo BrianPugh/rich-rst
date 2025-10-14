@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html>
 <head>
 <meta charset="UTF-8">
 <style>
 .r1 {font-weight: bold}
 .r2 {color: #f8f8f2; text-decoration-color: #f8f8f2; background-color: #282a36}
 .r3 {color: #949494; text-decoration-color: #949494}
-.r4 {color: #ff4689; text-decoration-color: #ff4689; background-color: #272822}
+.r4 {color: #f92672; text-decoration-color: #f92672; background-color: #272822}
 .r5 {background-color: #272822}
 .r6 {color: #f8f8f2; text-decoration-color: #f8f8f2; background-color: #272822}
 .r7 {color: #e6db74; text-decoration-color: #e6db74; background-color: #272822}
 .r8 {color: #bd93f9; text-decoration-color: #bd93f9; background-color: #282a36; text-decoration: underline}
-.r9 {color: #ed007e; text-decoration-color: #ed007e; background-color: #1e0010}
+.r9 {color: #960050; text-decoration-color: #960050; background-color: #1e0010}
 .r10 {color: #f1fa8c; text-decoration-color: #f1fa8c; font-weight: bold}
 .r11 {color: #a6e22e; text-decoration-color: #a6e22e; background-color: #272822}
 .r12 {color: #ae81ff; text-decoration-color: #ae81ff; background-color: #272822}
@@ -35,8 +34,9 @@ body {
 }
 </style>
 </head>
+<html>
 <body>
-    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit"><span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code><span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                             reStructuredText Directives                                              ║</span>
 <span class="r1">╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝</span>
 ┏━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -55,9 +55,10 @@ body {
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                                       Contents                                                       ║</span>
 <span class="r1">╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝</span>
-<span class="r2">This document describes the directives implemented in the reference reStructuredText parser.</span>
+<span class="r2">This document describes the directives implemented in the reference reStructuredText parser.Directives have the </span>
+<span class="r2">following syntax:</span>
 
-<span class="r2">Directives have the following syntax:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">+-------+-------------------------------+</span><span class="r5">                                                                           </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r4">|</span><span class="r6"> </span><span class="r7">&quot;.. &quot;</span><span class="r6"> </span><span class="r4">|</span><span class="r6"> directive type </span><span class="r7">&quot;::&quot;</span><span class="r6"> directive </span><span class="r4">|</span><span class="r5">                                                                           </span> <span class="r3">│</span>
@@ -69,12 +70,10 @@ body {
 <span class="r2">(collectively, the &quot;directive marker&quot;).  The directive block begins immediately after the directive marker, and includes</span>
 <span class="r2">all subsequent indented lines.  The directive block is divided into arguments, options (a field list), and content (in </span>
 <span class="r2">that order), any of which may appear.  See the </span><a class="r8" href="restructuredtext.html#directives">Directives</a><span class="r2"> section in the </span><a class="r8" href="restructuredtext.html">reStructuredText Markup Specification</a><span class="r2"> for </span>
-<span class="r2">syntax details.</span>
-
-<span class="r2">Descriptions below list &quot;doctree elements&quot; (document tree element names; XML DTD generic identifiers) corresponding to </span>
-<span class="r2">individual directives.  For details on the hierarchy of elements, please see </span><a class="r8" href="../doctree.html">The Docutils Document Tree</a><span class="r2"> and the </span><a class="r8" href="../docutils.dtd">Docutils</a>
-<a class="r8" href="../docutils.dtd">Generic DTD</a><span class="r2"> XML document type definition.  For directive implementation details, see </span><a class="r8" href="../../howto/rst-directives.html">Creating reStructuredText </a>
-<a class="r8" href="../../howto/rst-directives.html">Directives</a><span class="r2">.</span>
+<span class="r2">syntax details.Descriptions below list &quot;doctree elements&quot; (document tree element names; XML DTD generic identifiers) </span>
+<span class="r2">corresponding to individual directives.  For details on the hierarchy of elements, please see </span><a class="r8" href="../doctree.html">The Docutils Document Tree</a>
+<span class="r2">and the </span><a class="r8" href="../docutils.dtd">Docutils Generic DTD</a><span class="r2"> XML document type definition.  For directive implementation details, see </span><a class="r8" href="../../howto/rst-directives.html">Creating </a>
+<a class="r8" href="../../howto/rst-directives.html">reStructuredText Directives</a><span class="r2">.</span>
 
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                                     Admonitions                                                      ║</span>
@@ -100,11 +99,15 @@ body {
 <span class="r2">Admonitions are specially marked &quot;topics&quot; that can appear anywhere an ordinary body element can.  They contain arbitrary</span>
 <span class="r2">body elements. Typically, an admonition is rendered as an offset block in a document, sometimes outlined or shaded, with</span>
 <span class="r2">a title matching the admonition type.  For example:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> DANGER::</span><span class="r5">                                                                                                         </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   Beware killer rabbits</span><span class="r9">!</span><span class="r5">                                                                                           </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">This directive might be rendered something like this:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">+------------------------+</span><span class="r5">                                                                                          </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r4">|</span><span class="r6">        </span><span class="r9">!</span><span class="r6">DANGER</span><span class="r9">!</span><span class="r6">        </span><span class="r4">|</span><span class="r5">                                                                                          </span> <span class="r3">│</span>
@@ -114,19 +117,21 @@ body {
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">The following admonition directives have been implemented:</span>
 
-<span class="r10"> • </span>attention
-<span class="r10"> • </span>caution
-<span class="r10"> • </span>danger
-<span class="r10"> • </span>error
-<span class="r10"> • </span>hint
-<span class="r10"> • </span>important
-<span class="r10"> • </span>note
-<span class="r10"> • </span>tip
-<span class="r10"> • </span>warning
+<span class="r10"> • attention</span>
+<span class="r10"> • caution</span>
+<span class="r10"> • danger</span>
+<span class="r10"> • error</span>
+<span class="r10"> • hint</span>
+<span class="r10"> • important</span>
+<span class="r10"> • note</span>
+<span class="r10"> • tip</span>
+<span class="r10"> • warning</span>
 
 <span class="r2">Any text immediately following the directive indicator (on the same line and/or indented on following lines) is </span>
 <span class="r2">interpreted as a directive block and is parsed for normal body elements.  For example, the following &quot;note&quot; admonition </span>
 <span class="r2">directive contains one paragraph and a bullet list consisting of two list items:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> note:: This </span><span class="r4">is</span><span class="r6"> a note admonition</span><span class="r4">.</span><span class="r5">                                                                                </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   This </span><span class="r4">is</span><span class="r6"> the second line of the first paragraph</span><span class="r4">.</span><span class="r5">                                                                  </span> <span class="r3">│</span>
@@ -151,17 +156,19 @@ body {
 ├─────────────────────┼──────────────────────────────────┤
 │ <span class="r1">Directive Content  </span> │ Interpreted as body elements.    │
 └─────────────────────┴──────────────────────────────────┘
-<span class="r2">This is a generic, titled admonition.  The title may be anything the author desires.</span>
+<span class="r2">This is a generic, titled admonition.  The title may be anything the author desires.The author-supplied title is also </span>
+<span class="r2">used as a </span><span class="r8">&quot;classes&quot;</span><span class="r2"> attribute value after being converted into a valid identifier form (down-cased; non-alphanumeric </span>
+<span class="r2">characters converted to single hyphens; &quot;admonition-&quot; prefixed).  For example, this admonition:</span>
 
-<span class="r2">The author-supplied title is also used as a </span><span class="r8">&quot;classes&quot;</span><span class="r2"> attribute value after being converted into a valid identifier form</span>
-<span class="r2">(down-cased; non-alphanumeric characters converted to single hyphens; &quot;admonition-&quot; prefixed).  For example, this </span>
-<span class="r2">admonition:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> admonition:: And, by the way</span><span class="r4">...</span><span class="r5">                                                                                  </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   You can make up your own admonition too</span><span class="r4">.</span><span class="r5">                                                                         </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">becomes the following document tree (pseudo-XML)</span>
+
+
 <span class="r3">┌──────────────────────────────────────────────────────── xml ─────────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">&lt;document</span><span class="r6"> </span><span class="r11">source=</span><span class="r7">&quot;test data&quot;</span><span class="r4">&gt;</span><span class="r5">                                                                                       </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">    </span><span class="r4">&lt;admonition</span><span class="r6"> </span><span class="r11">classes=</span><span class="r7">&quot;admonition-and-by-the-way&quot;</span><span class="r4">&gt;</span><span class="r5">                                                                </span> <span class="r3">│</span>
@@ -175,10 +182,9 @@ body {
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                                        Images                                                        ║</span>
 <span class="r1">╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝</span>
-<span class="r2">There are two image directives: &quot;image&quot; and &quot;figure&quot;.</span>
-
-<span class="r2">It is up to the author to ensure compatibility of the image data format with the output format or user agent (</span><span class="r8">LaTeX</span><span class="r2"> </span>
-<span class="r2">engine, </span><span class="r8">HTML5 browser</span><span class="r2">, ODT, ...). The following, non exhaustive table provides an overview</span>
+<span class="r2">There are two image directives: &quot;image&quot; and &quot;figure&quot;.It is up to the author to ensure compatibility of the image data </span>
+<span class="r2">format with the output format or user agent (</span><span class="r8">LaTeX</span><span class="r2"> engine, </span><span class="r8">HTML5 browser</span><span class="r2">, ODT, ...). The following, non exhaustive table</span>
+<span class="r2">provides an overview</span>
 
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                                        Image                                                         ║</span>
@@ -197,17 +203,18 @@ body {
 │ <span class="r1">Directive Content  </span> │ None.                      │
 └─────────────────────┴────────────────────────────┘
 <span class="r2">An &quot;image&quot; is a simple picture:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> image:: picture</span><span class="r4">.</span><span class="r6">png</span><span class="r5">                                                                                              </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
-<span class="r2">Inline images can be defined with an &quot;image&quot; directive in a </span><a class="r8" href="restructuredtext.html#substitution-definitions">substitution definition</a>
+<span class="r2">Inline images can be defined with an &quot;image&quot; directive in a </span><a class="r8" href="restructuredtext.html#substitution-definitions">substitution definition</a><span class="r2">The URI for the image source file is </span>
+<span class="r2">specified in the directive argument.  As with hyperlink targets, the image URI may begin on the same line as the </span>
+<span class="r2">explicit markup start and target name, or it may begin in an indented text block immediately following, with no </span>
+<span class="r2">intervening blank lines.  If there are multiple lines in the link block, they are stripped of leading and trailing </span>
+<span class="r2">whitespace and joined together.Optionally, the image link block may contain a flat field list, the .  For example:</span>
 
-<span class="r2">The URI for the image source file is specified in the directive argument.  As with hyperlink targets, the image URI may </span>
-<span class="r2">begin on the same line as the explicit markup start and target name, or it may begin in an indented text block </span>
-<span class="r2">immediately following, with no intervening blank lines.  If there are multiple lines in the link block, they are </span>
-<span class="r2">stripped of leading and trailing whitespace and joined together.</span>
 
-<span class="r2">Optionally, the image link block may contain a flat field list, the .  For example:</span>
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> image:: picture</span><span class="r4">.</span><span class="r6">jpeg</span><span class="r5">                                                                                             </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :height: </span><span class="r12">100</span><span class="r6">px</span><span class="r5">                                                                                                   </span> <span class="r3">│</span>
@@ -267,6 +274,8 @@ absolute), or a reference name with underscore suffix (e.g. `a name`_).
 <span class="r2">A &quot;figure&quot; consists of </span><span class="r8">image</span><span class="r2"> data (including </span><span class="r8">image options</span><span class="r2">), an optional caption (a single paragraph), and an optional </span>
 <span class="r2">legend (arbitrary body elements). For page-based output media, figures might float to a different position if this helps</span>
 <span class="r2">the page layout.</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> figure:: picture</span><span class="r4">.</span><span class="r6">png</span><span class="r5">                                                                                             </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :scale: </span><span class="r12">50</span><span class="r6"> </span><span class="r4">%</span><span class="r5">                                                                                                     </span> <span class="r3">│</span>
@@ -275,10 +284,8 @@ absolute), or a reference name with underscore suffix (e.g. `a name`_).
 <span class="r3">│</span> <span class="r6">   This </span><span class="r4">is</span><span class="r6"> the caption of the figure (a simple paragraph)</span><span class="r4">.</span><span class="r5">                                                          </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">There must be blank lines before the caption paragraph and before the legend.  To specify a legend without a caption, </span>
-<span class="r2">use an empty comment (&quot;..&quot;) in place of the caption.</span>
-
-<span class="r2">The &quot;figure&quot; directive supports all of the options of the &quot;image&quot; directive (see </span><span class="r8">image options</span><span class="r2"> above). These options </span>
-<span class="r2">(except &quot;align&quot;) are passed on to the contained image.</span>
+<span class="r2">use an empty comment (&quot;..&quot;) in place of the caption.The &quot;figure&quot; directive supports all of the options of the &quot;image&quot; </span>
+<span class="r2">directive (see </span><span class="r8">image options</span><span class="r2"> above). These options (except &quot;align&quot;) are passed on to the contained image.</span>
 
     align : <span class="r13">&quot;left&quot;, &quot;center&quot;, or &quot;right&quot;</span>
       The horizontal alignment of the figure, allowing the image to float and have the text flow around it.  The 
@@ -314,10 +321,11 @@ doctree element.  This option does not scale the included image; use the &quot;w
 └─────────────────────┴────────────────────────────────┘
 <span class="r2">A topic is like a block quote with a title, or a self-contained section with no subsections.  Use the &quot;topic&quot; directive </span>
 <span class="r2">to indicate a self-contained idea that is separate from the flow of the document. Topics may occur anywhere a section or</span>
-<span class="r2">transition may occur.  Body elements and topics may not contain nested topics.</span>
+<span class="r2">transition may occur.  Body elements and topics may not contain nested topics.The directive&#x27;s sole argument is </span>
+<span class="r2">interpreted as the topic title; the next line must be blank.  All subsequent lines make up the topic body, interpreted </span>
+<span class="r2">as body elements.  For example:</span>
 
-<span class="r2">The directive&#x27;s sole argument is interpreted as the topic title; the next line must be blank.  All subsequent lines make</span>
-<span class="r2">up the topic body, interpreted as body elements.  For example:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> topic:: Topic Title</span><span class="r5">                                                                                              </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
@@ -344,14 +352,12 @@ doctree element.  This option does not scale the included image; use the &quot;w
 <span class="r2">Sidebars are like miniature, parallel documents that occur inside other documents, providing related or reference </span>
 <span class="r2">material.  A sidebar is typically offset by a border and &quot;floats&quot; to the side of the page; the document&#x27;s main text may </span>
 <span class="r2">flow around it.  Sidebars can also be likened to super-footnotes; their content is outside of the flow of the document&#x27;s</span>
-<span class="r2">main text.</span>
+<span class="r2">main text.Sidebars may occur anywhere a section or transition may occur.  Body elements (including sidebars) may not </span>
+<span class="r2">contain nested sidebars.The directive&#x27;s sole argument is interpreted as the sidebar title, which may be followed by a </span>
+<span class="r2">subtitle option (see below); the next line must be blank.  All subsequent lines make up the sidebar body, interpreted as</span>
+<span class="r2">body elements.  For example:</span>
 
-<span class="r2">Sidebars may occur anywhere a section or transition may occur.  Body elements (including sidebars) may not contain </span>
-<span class="r2">nested sidebars.</span>
 
-<span class="r2">The directive&#x27;s sole argument is interpreted as the sidebar title, which may be followed by a subtitle option (see </span>
-<span class="r2">below); the next line must be blank.  All subsequent lines make up the sidebar body, interpreted as body elements.  For </span>
-<span class="r2">example:</span>
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> sidebar:: Optional Sidebar Title</span><span class="r5">                                                                                 </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :subtitle: Optional Sidebar Subtitle</span><span class="r5">                                                                             </span> <span class="r3">│</span>
@@ -389,6 +395,8 @@ doctree element.  This option does not scale the included image; use the &quot;w
 <span class="r2">serif typeface instead of a typewriter/monospaced face, and not automatically indented.  (Have the line-block directive </span>
 <span class="r2">begin a block quote to get an indented line block.)  Line blocks are useful for address blocks and verse (poetry, song </span>
 <span class="r2">lyrics), where the structure of lines is significant.  For example, here&#x27;s a classic:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r7">&quot;To Ma Own Beloved Lassie: A Poem on her 17th Birthday&quot;</span><span class="r6">, by</span><span class="r5">                                                         </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">Ewan McTeagle (</span><span class="r14">for</span><span class="r6"> Lassie O</span><span class="r7">&#x27;Shea):</span><span class="r5">                                                                                  </span> <span class="r3">│</span>
@@ -419,14 +427,13 @@ doctree element.  This option does not scale the included image; use the &quot;w
 └─────────────────────┴────────────────────────────────────────┘
 <span class="r2">Unlike an ordinary literal block, the &quot;parsed-literal&quot; directive constructs a literal block where the text is parsed for</span>
 <span class="r2">inline markup. It is equivalent to a </span><span class="r8">line block</span><span class="r2"> with different rendering: typically in a typewriter/monospaced typeface,</span>
-<span class="r2">like an ordinary literal block.  Parsed literal blocks are useful for adding hyperlinks to code examples.</span>
-
-<span class="r2">However, care must be taken with the text, because inline markup is recognized and there is no protection from parsing. </span>
+<span class="r2">like an ordinary literal block.  Parsed literal blocks are useful for adding hyperlinks to code examples.However, care </span>
+<span class="r2">must be taken with the text, because inline markup is recognized and there is no protection from parsing.  </span>
 <span class="r2">Backslash-escapes may be necessary to prevent unintended parsing.  And because the markup characters are removed by the </span>
 <span class="r2">parser, care must also be taken with vertical alignment.  Parsed &quot;ASCII art&quot; is tricky, and extra whitespace may be </span>
-<span class="r2">necessary.</span>
+<span class="r2">necessary.For example, all the element names in this content model are links:</span>
 
-<span class="r2">For example, all the element names in this content model are links:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> parsed</span><span class="r4">-</span><span class="r6">literal::</span><span class="r5">                                                                                                 </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
@@ -456,15 +463,10 @@ doctree element.  This option does not scale the included image; use the &quot;w
 <span class="r2">The &quot;code&quot; directive constructs a literal block. If the code language is specified, the content is parsed by the </span>
 <span class="r8">Pygments</span><span class="r2"> syntax highlighter and tokens are stored in nested </span><a class="r8" href="../doctree.html#inline-elements">inline elements</a><span class="r2"> with class arguments according to their </span>
 <span class="r2">syntactic category. The actual highlighting requires a style-sheet (e.g. one </span><span class="r8">generated by Pygments</span><span class="r2">, see the </span>
-<span class="r8">sandbox/stylesheets</span><span class="r2"> for examples).</span>
-
-<span class="r2">The parsing can be turned off with the </span><a class="r8" href="../../user/config.html#syntax-highlight">syntax_highlight</a><span class="r2"> configuration setting and command line option or by specifying </span>
-<span class="r2">the language as </span><span class="r8">class</span><span class="r2"> option instead of directive argument. This also avoids warnings when </span><a class="r8" href="https://pygments.org/">Pygments</a><span class="r2"> is not installed or </span>
-<span class="r2">the language is not in the </span><a class="r8" href="https://pygments.org/languages/">supported languages and markup formats</a><span class="r2">.</span>
-
-<span class="r2">For inline code, use the </span><a class="r8" href="roles.html#code">&quot;code&quot; role</a><span class="r2">.</span>
-
-<span class="r2">The following options are recognized:</span>
+<span class="r8">sandbox/stylesheets</span><span class="r2"> for examples).The parsing can be turned off with the </span><a class="r8" href="../../user/config.html#syntax-highlight">syntax_highlight</a><span class="r2"> configuration setting and </span>
+<span class="r2">command line option or by specifying the language as </span><span class="r8">class</span><span class="r2"> option instead of directive argument. This also avoids </span>
+<span class="r2">warnings when </span><a class="r8" href="https://pygments.org/">Pygments</a><span class="r2"> is not installed or the language is not in the </span><a class="r8" href="https://pygments.org/languages/">supported languages and markup formats</a><span class="r2">.For inline </span>
+<span class="r2">code, use the </span><a class="r8" href="roles.html#code">&quot;code&quot; role</a><span class="r2">.The following options are recognized:</span>
 
     number-lines : <span class="r13">[integer] (start line number)</span>
       Precede every line with a line number. The optional argument is the number of the first line (default 1).
@@ -503,6 +505,8 @@ doctree element.  This option does not scale the included image; use the &quot;w
 └───────────────────────┴──────────────────────────────────────────────────────┘
 <span class="r2">The &quot;math&quot; directive inserts blocks with mathematical content (display formulas, equations) into the document. The input</span>
 <span class="r2">format is </span><a class="r8" href="../../ref/rst/mathematics.html">LaTeX math syntax</a><span class="r2"> with support for Unicode symbols, for example:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> math::</span><span class="r5">                                                                                                           </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
@@ -511,9 +515,7 @@ doctree element.  This option does not scale the included image; use the &quot;w
 <span class="r2">Support is limited to a subset of </span><span class="r16">LaTeX math</span><span class="r2"> by the conversion required for many output formats.  For HTML, the </span>
 <a class="r8" href="../../user/config.html#math-output">math_output</a><span class="r2"> configuration setting (or the corresponding </span><span class="r17">--math-output</span><span class="r2"> command line option) select between alternative </span>
 <span class="r2">output formats with different subsets of supported elements. If a writer does not support math typesetting, the content </span>
-<span class="r2">is inserted verbatim.</span>
-
-<span class="r2">For inline formulas, use the </span><a class="r8" href="roles.html#math">&quot;math&quot; role</a><span class="r2">.</span>
+<span class="r2">is inserted verbatim.For inline formulas, use the </span><a class="r8" href="roles.html#math">&quot;math&quot; role</a><span class="r2">.</span>
 
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                                        Rubric                                                        ║</span>
@@ -553,9 +555,9 @@ doctree element.  This option does not scale the included image; use the &quot;w
 │ <span class="r1">Directive Content  </span> │ Interpreted as the body of the block quote. │
 └─────────────────────┴─────────────────────────────────────────────┘
 <span class="r2">An epigraph is an apposite (suitable, apt, or pertinent) short inscription, often a quotation or poem, at the beginning </span>
-<span class="r2">of a document or section.</span>
+<span class="r2">of a document or section.The &quot;epigraph&quot; directive produces an &quot;epigraph&quot;-class block quote. For example, this input:</span>
 
-<span class="r2">The &quot;epigraph&quot; directive produces an &quot;epigraph&quot;-class block quote. For example, this input:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> epigraph::</span><span class="r5">                                                                                                       </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
@@ -564,6 +566,8 @@ doctree element.  This option does not scale the included image; use the &quot;w
 <span class="r3">│</span> <span class="r6">   </span><span class="r4">--</span><span class="r6"> Buckaroo Banzai</span><span class="r5">                                                                                               </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">becomes this document tree fragment:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">&lt;</span><span class="r6">block_quote classes</span><span class="r4">=</span><span class="r7">&quot;epigraph&quot;</span><span class="r4">&gt;</span><span class="r5">                                                                                    </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">    </span><span class="r4">&lt;</span><span class="r6">paragraph</span><span class="r4">&gt;</span><span class="r5">                                                                                                     </span> <span class="r3">│</span>
@@ -587,9 +591,8 @@ doctree element.  This option does not scale the included image; use the &quot;w
 ├─────────────────────┼─────────────────────────────────────────────┤
 │ <span class="r1">Directive Content  </span> │ Interpreted as the body of the block quote. │
 └─────────────────────┴─────────────────────────────────────────────┘
-<span class="r2">Highlights summarize the main points of a document or section, often consisting of a list.</span>
-
-<span class="r2">The &quot;highlights&quot; directive produces a &quot;highlights&quot;-class block quote. See </span><span class="r8">Epigraph</span><span class="r2"> above for an analogous example.</span>
+<span class="r2">Highlights summarize the main points of a document or section, often consisting of a list.The &quot;highlights&quot; directive </span>
+<span class="r2">produces a &quot;highlights&quot;-class block quote. See </span><span class="r8">Epigraph</span><span class="r2"> above for an analogous example.</span>
 
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                                      Pull-Quote                                                      ║</span>
@@ -608,9 +611,8 @@ doctree element.  This option does not scale the included image; use the &quot;w
 │ <span class="r1">Directive Content  </span> │ Interpreted as the body of the block quote. │
 └─────────────────────┴─────────────────────────────────────────────┘
 <span class="r2">A pull-quote is a small selection of text &quot;pulled out and quoted&quot;, typically in a larger typeface.  Pull-quotes are used</span>
-<span class="r2">to attract attention, especially in long articles.</span>
-
-<span class="r2">The &quot;pull-quote&quot; directive produces a &quot;pull-quote&quot;-class block quote. See </span><span class="r8">Epigraph</span><span class="r2"> above for an analogous example.</span>
+<span class="r2">to attract attention, especially in long articles.The &quot;pull-quote&quot; directive produces a &quot;pull-quote&quot;-class block quote. </span>
+<span class="r2">See </span><span class="r8">Epigraph</span><span class="r2"> above for an analogous example.</span>
 
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                                  Compound Paragraph                                                  ║</span>
@@ -631,6 +633,8 @@ doctree element.  This option does not scale the included image; use the &quot;w
 <span class="r2">The &quot;compound&quot; directive is used to create a compound paragraph, which is a single logical paragraph containing multiple</span>
 <span class="r2">physical body elements such as simple paragraphs, literal blocks, tables, lists, etc., instead of directly containing </span>
 <span class="r2">text and inline elements.  For example:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> compound::</span><span class="r5">                                                                                                       </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
@@ -653,10 +657,10 @@ doctree element.  This option does not scale the included image; use the &quot;w
 <span class="r2">Compound paragraphs are typically rendered as multiple distinct text blocks, with the possibility of variations to </span>
 <span class="r2">emphasize their logical unity:</span>
 
-<span class="r10"> • </span>If paragraphs are rendered with a first-line indent, only the first physical paragraph of a compound paragraph should
-have that indent -- second and further physical paragraphs should omit the indents;
-<span class="r10"> • </span>vertical spacing between physical elements may be reduced;
-<span class="r10"> • </span>and so on.
+<span class="r10"> • If paragraphs are rendered with a first-line indent, only the first physical paragraph of a compound paragraph should</span>
+<span class="r10">have that indent -- second and further physical paragraphs should omit the indents;</span>
+<span class="r10"> • vertical spacing between physical elements may be reduced;</span>
+<span class="r10"> • and so on.</span>
 
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                                      Container                                                       ║</span>
@@ -677,12 +681,16 @@ have that indent -- second and further physical paragraphs should omit the inden
 <span class="r2">The &quot;container&quot; directive surrounds its contents (arbitrary body elements) with a generic block-level &quot;container&quot; </span>
 <span class="r2">element.  Combined with the optional &quot;</span><span class="r8">classes</span><span class="r2">&quot; attribute argument(s), this is an extension mechanism for users &amp; </span>
 <span class="r2">applications.  For example:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> container:: custom</span><span class="r5">                                                                                               </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   This paragraph might be rendered </span><span class="r4">in</span><span class="r6"> a custom way</span><span class="r4">.</span><span class="r5">                                                                </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">Parsing the above results in the following pseudo-XML</span>
+
+
 <span class="r3">┌──────────────────────────────────────────────────────── xml ─────────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">&lt;container</span><span class="r6"> </span><span class="r11">classes=</span><span class="r7">&quot;custom&quot;</span><span class="r4">&gt;</span><span class="r5">                                                                                        </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">    </span><span class="r4">&lt;paragraph&gt;</span><span class="r5">                                                                                                     </span> <span class="r3">│</span>
@@ -715,6 +723,8 @@ have that indent -- second and further physical paragraphs should omit the inden
 │ <span class="r1">Directive Content  </span> │ A normal reStructuredText table. │
 └─────────────────────┴──────────────────────────────────┘
 <span class="r2">The &quot;table&quot; directive is used to associate a title with a table or specify options, e.g.:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> table:: Truth table </span><span class="r14">for</span><span class="r6"> </span><span class="r7">&quot;not&quot;</span><span class="r5">                                                                                    </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :widths: auto</span><span class="r5">                                                                                                    </span> <span class="r3">│</span>
@@ -764,11 +774,13 @@ overriding a table_style or class value &quot;colwidths-auto&quot;.
 <span class="r2">generated by spreadsheet applications and commercial databases.  The data may be internal (an integral part of the </span>
 <span class="r2">document) or external (a separate file).</span>
 
-<span class="r10"> • </span>Block markup and inline markup within cells is supported.  Line ends are recognized within cells.
-<span class="r10"> • </span>There is no support for checking that the number of columns in each row is the same. The directive automatically adds
-empty entries at the end of short rows.  Add &quot;strict&quot; option to verify input?
+<span class="r10"> • Block markup and inline markup within cells is supported.  Line ends are recognized within cells.</span>
+<span class="r10"> • There is no support for checking that the number of columns in each row is the same. The directive automatically adds</span>
+<span class="r10">empty entries at the end of short rows.  Add &quot;strict&quot; option to verify input?</span>
 
 <span class="r2">Example:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> csv</span><span class="r4">-</span><span class="r6">table:: Frozen Delights</span><span class="r9">!</span><span class="r5">                                                                                     </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :header: </span><span class="r7">&quot;Treat&quot;</span><span class="r6">, </span><span class="r7">&quot;Quantity&quot;</span><span class="r6">, </span><span class="r7">&quot;Description&quot;</span><span class="r5">                                                                      </span> <span class="r3">│</span>
@@ -844,12 +856,11 @@ determines the width of the table based on its contents or the column widths.
 ├─────────────────────┼──────────────────────────────────┤
 │ <span class="r1">Directive Content  </span> │ A uniform two-level bullet list. │
 └─────────────────────┴──────────────────────────────────┘
-<span class="r2">(This is an initial implementation; </span><span class="r8">further ideas</span><span class="r2"> may be implemented in the future.)</span>
+<span class="r2">(This is an initial implementation; </span><span class="r8">further ideas</span><span class="r2"> may be implemented in the future.)The &quot;list-table&quot; directive is used </span>
+<span class="r2">to create a table from data in a uniform two-level bullet list.  &quot;Uniform&quot; means that each sublist (second-level list) </span>
+<span class="r2">must contain the same number of list items.Example:</span>
 
-<span class="r2">The &quot;list-table&quot; directive is used to create a table from data in a uniform two-level bullet list.  &quot;Uniform&quot; means that</span>
-<span class="r2">each sublist (second-level list) must contain the same number of list items.</span>
 
-<span class="r2">Example:</span>
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> list</span><span class="r4">-</span><span class="r6">table:: Frozen Delights</span><span class="r9">!</span><span class="r5">                                                                                    </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :widths: </span><span class="r12">15</span><span class="r6"> </span><span class="r12">10</span><span class="r6"> </span><span class="r12">30</span><span class="r5">                                                                                                </span> <span class="r3">│</span>
@@ -908,29 +919,37 @@ determination of column widths to the backend (LaTeX, the HTML browser, ...).
 │ <span class="r1">Directive Content  </span> │ None.                 │
 └─────────────────────┴───────────────────────┘
 <span class="r2">The &quot;contents&quot; directive generates a table of contents (TOC) in a </span><a class="r8" href="../doctree.html#topic">topic</a><span class="r2">.  Topics, and therefore tables of contents, may </span>
-<span class="r2">occur anywhere a section or transition may occur.  Body elements and topics may not contain tables of contents.</span>
+<span class="r2">occur anywhere a section or transition may occur.  Body elements and topics may not contain tables of contents.Here&#x27;s </span>
+<span class="r2">the directive in its simplest form:</span>
 
-<span class="r2">Here&#x27;s the directive in its simplest form:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> contents::</span><span class="r5">                                                                                                       </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
-<span class="r2">Language-dependent boilerplate text will be used for the title.  The English default title text is &quot;Contents&quot;.</span>
+<span class="r2">Language-dependent boilerplate text will be used for the title.  The English default title text is &quot;Contents&quot;.An </span>
+<span class="r2">explicit title may be specified:</span>
 
-<span class="r2">An explicit title may be specified:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> contents:: Table of Contents</span><span class="r5">                                                                                     </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">The title may span lines, although it is not recommended:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> contents:: Here</span><span class="r7">&#x27;s a very long Table of</span><span class="r5">                                                                           </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   Contents title</span><span class="r5">                                                                                                   </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">Options may be specified for the directive, using a field list:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> contents:: Table of Contents</span><span class="r5">                                                                                     </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :depth: </span><span class="r12">2</span><span class="r5">                                                                                                        </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">If the default title is to be used, the options field list may begin on the same line as the directive marker:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> contents:: :depth: </span><span class="r12">2</span><span class="r5">                                                                                             </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
@@ -969,17 +988,13 @@ generate no back-links.
 │ <span class="r1">Configuration Setting</span> │ sectnum_xform                               │
 └───────────────────────┴─────────────────────────────────────────────┘
 <span class="r2">The &quot;sectnum&quot; (or &quot;section-numbering&quot;) directive automatically numbers sections and subsections in a document (if not </span>
-<span class="r2">disabled by the </span><span class="r17">--no-section-numbering</span><span class="r2"> command line option or the </span><a class="r8" href="../../user/config.html#sectnum-xform">sectnum_xform</a><span class="r2"> configuration setting).</span>
-
-<span class="r2">Section numbers are of the &quot;multiple enumeration&quot; form, where each level has a number, separated by periods.  For </span>
-<span class="r2">example, the title of section 1, subsection 2, subsubsection 3 would have &quot;1.2.3&quot; prefixed.</span>
-
-<span class="r2">The &quot;sectnum&quot; directive does its work in two passes: the initial parse and a transform.  During the initial parse, a </span>
-<span class="r2">&quot;pending&quot; element is generated which acts as a placeholder, storing any options internally. At a later stage in the </span>
-<span class="r2">processing, the &quot;pending&quot; element triggers a transform, which adds section numbers to titles.  Section numbers are </span>
-<span class="r2">enclosed in a &quot;generated&quot; element, and titles have their &quot;auto&quot; attribute set to &quot;1&quot;.</span>
-
-<span class="r2">The following options are recognized:</span>
+<span class="r2">disabled by the </span><span class="r17">--no-section-numbering</span><span class="r2"> command line option or the </span><a class="r8" href="../../user/config.html#sectnum-xform">sectnum_xform</a><span class="r2"> configuration setting).Section numbers </span>
+<span class="r2">are of the &quot;multiple enumeration&quot; form, where each level has a number, separated by periods.  For example, the title of </span>
+<span class="r2">section 1, subsection 2, subsubsection 3 would have &quot;1.2.3&quot; prefixed.The &quot;sectnum&quot; directive does its work in two </span>
+<span class="r2">passes: the initial parse and a transform.  During the initial parse, a &quot;pending&quot; element is generated which acts as a </span>
+<span class="r2">placeholder, storing any options internally. At a later stage in the processing, the &quot;pending&quot; element triggers a </span>
+<span class="r2">transform, which adds section numbers to titles.  Section numbers are enclosed in a &quot;generated&quot; element, and titles have</span>
+<span class="r2">their &quot;auto&quot; attribute set to &quot;1&quot;.The following options are recognized:</span>
 
     depth : <span class="r13">integer</span>
       The number of section levels that are numbered by this directive. The default is unlimited depth.
@@ -1014,13 +1029,14 @@ right numbering for a document split over several source files.  The default is 
 └─────────────────────┴───────────────────────────────┘
 <span class="r2">The &quot;header&quot; and &quot;footer&quot; directives create document decorations, useful for page navigation, notes, time/datestamp, </span>
 <span class="r2">etc.  For example:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> header:: This space </span><span class="r14">for</span><span class="r6"> rent</span><span class="r4">.</span><span class="r5">                                                                                    </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">This will add a paragraph to the document header, which will appear at the top of the generated web page or at the top </span>
-<span class="r2">of every printed page.</span>
-
-<span class="r2">These directives may be used multiple times, cumulatively.  There is currently support for only one header and footer.</span>
+<span class="r2">of every printed page.These directives may be used multiple times, cumulatively.  There is currently support for only </span>
+<span class="r2">one header and footer.</span>
 
 <span class="r15">╭─────────────────────────────────────────────────────── Note:  ───────────────────────────────────────────────────────╮</span>
 <span class="r15">│ While it is possible to use the &quot;header&quot; and &quot;footer&quot; directives to create navigational elements for web pages, you  │</span>
@@ -1104,9 +1120,7 @@ right numbering for a document split over several source files.  The default is 
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                                       Imagemap                                                       ║</span>
 <span class="r1">╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝</span>
-<span class="r1">NOT IMPLEMENTED YET</span>
-
-<span class="r21">Non-standard element: imagemap.</span>
+<span class="r1">NOT IMPLEMENTED YET</span><span class="r21">Non-standard element: imagemap.</span>
 
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                       Directives for Substitution Definitions                                        ║</span>
@@ -1132,6 +1146,8 @@ right numbering for a document split over several source files.  The default is 
 └─────────────────────┴────────────────────────────────────────────────┘
 <span class="r2">The &quot;replace&quot; directive is used to indicate replacement text for a substitution reference.  It may be used within </span>
 <span class="r8">substitution definitions</span><span class="r2"> only.  For example, this directive can be used to expand abbreviations:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> </span><span class="r4">|</span><span class="r6">reST</span><span class="r4">|</span><span class="r6"> replace:: reStructuredText</span><span class="r5">                                                                                </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
@@ -1140,6 +1156,8 @@ right numbering for a document split over several source files.  The default is 
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">As reStructuredText doesn&#x27;t support nested inline markup, the only way to create a reference with styled text is to use </span>
 <span class="r2">substitutions with the &quot;replace&quot; directive:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r6">I recommend you </span><span class="r14">try</span><span class="r6"> </span><span class="r4">|</span><span class="r6">Python</span><span class="r4">|</span><span class="r6">_</span><span class="r4">.</span><span class="r5">                                                                                      </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
@@ -1164,22 +1182,22 @@ right numbering for a document split over several source files.  The default is 
 │ <span class="r1">Directive Content  </span> │ None.                                           │
 └─────────────────────┴─────────────────────────────────────────────────┘
 <span class="r2">The &quot;unicode&quot; directive converts Unicode character codes (numerical values) to characters, and may be used in </span>
-<span class="r8">substitution definitions</span><span class="r2"> only.</span>
-
-<span class="r2">The arguments, separated by spaces, can be:</span>
+<span class="r8">substitution definitions</span><span class="r2"> only.The arguments, separated by spaces, can be:</span>
 
   <span class="r10"> ∘ </span>character codes as
   <span class="r10"> ∘ </span>decimal numbers or  hexadecimal numbers, prefixed by 0x, x, \x, U+, u, or \u or as XML-style hexadecimal character 
 entities, e.g. &amp;#x1a2b;
     <span class="r10"> ▪ </span>decimal numbers or
-    <span class="r10"> ▪ </span>hexadecimal numbers, prefixed by 0x, x, \x, U+, u, or \u or as XML-style hexadecimal character entities, e.g. &amp;#x
-<span class="r10"> • </span>hexadecimal numbers, prefixed by 0x, x, \x, U+, u, or \u or as XML-style hexadecimal character entities, e.g. &amp;#x1a2b
-<span class="r10"> • </span>text, which is used as-is.
+    <span class="r10"> ▪ </span>hexadecimal numbers, prefixed by 0x, x, \x, U+, u, or \u or as XML-style hexadecimal character entities, e.g. 
+&amp;#x1a2b;
+<span class="r10"> • hexadecimal numbers, prefixed by 0x, x, \x, U+, u, or \u or as XML-style hexadecimal character entities, e.g. </span>
+<span class="r10">&amp;#x1a2b;</span>
+<span class="r10"> • text, which is used as-is.</span>
 
 <span class="r2">Text following &quot; .. &quot; is a comment and is ignored.  The spaces between the arguments are ignored and thus do not appear </span>
-<span class="r2">in the output. Hexadecimal codes are case-insensitive.</span>
+<span class="r2">in the output. Hexadecimal codes are case-insensitive.For example, the following text:</span>
 
-<span class="r2">For example, the following text:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r6">Copyright </span><span class="r4">|</span><span class="r6">copy</span><span class="r4">|</span><span class="r6"> </span><span class="r12">2003</span><span class="r6">, </span><span class="r4">|</span><span class="r6">BogusMegaCorp (TM)</span><span class="r4">|</span><span class="r6"> </span><span class="r4">|---|</span><span class="r5">                                                                   </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">all rights reserved</span><span class="r4">.</span><span class="r5">                                                                                                </span> <span class="r3">│</span>
@@ -1221,11 +1239,11 @@ entities, e.g. &amp;#x1a2b;
 │ <span class="r1">Directive Content  </span> │ None.                        │
 └─────────────────────┴──────────────────────────────┘
 <span class="r2">The &quot;date&quot; directive generates the current local date and inserts it into the document as text.  This directive may be </span>
-<span class="r2">used in substitution definitions only.</span>
+<span class="r2">used in substitution definitions only.The optional directive content is interpreted as the desired date format, using </span>
+<span class="r2">the same codes as Python&#x27;s </span><span class="r8">time.strftime()</span><span class="r2"> function.  The default format is &quot;%Y-%m-%d&quot; (ISO 8601 date), but time fields </span>
+<span class="r2">can also be used.  Examples:</span>
 
-<span class="r2">The optional directive content is interpreted as the desired date format, using the same codes as Python&#x27;s </span>
-<span class="r8">time.strftime()</span><span class="r2"> function.  The default format is &quot;%Y-%m-%d&quot; (ISO 8601 date), but time fields can also be used.  </span>
-<span class="r2">Examples:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> </span><span class="r4">|</span><span class="r6">date</span><span class="r4">|</span><span class="r6"> date::</span><span class="r5">                                                                                                    </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> </span><span class="r4">|</span><span class="r6">time</span><span class="r4">|</span><span class="r6"> date:: </span><span class="r4">%</span><span class="r6">H:</span><span class="r4">%</span><span class="r6">M</span><span class="r5">                                                                                              </span> <span class="r3">│</span>
@@ -1263,6 +1281,8 @@ entities, e.g. &amp;#x1a2b;
 <span class="r2">The &quot;include&quot; directive reads a text file. The directive argument is the path to the file to be included, relative to </span>
 <span class="r2">the document containing the directive. Unless the options </span><span class="r17">literal</span><span class="r2">, </span><span class="r17">code</span><span class="r2">, or </span><span class="r17">parser</span><span class="r2"> are given, the file is parsed in the </span>
 <span class="r2">current document&#x27;s context at the point of the directive. For example:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r6">This first example will be parsed at the document level, </span><span class="r4">and</span><span class="r6"> can</span><span class="r5">                                                    </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">thus contain any construct, including section headers</span><span class="r4">.</span><span class="r5">                                                              </span> <span class="r3">│</span>
@@ -1278,18 +1298,16 @@ entities, e.g. &amp;#x1a2b;
 <span class="r3">│</span> <span class="r6">    </span><span class="r4">..</span><span class="r6"> include:: inclusion</span><span class="r4">.</span><span class="r6">txt</span><span class="r5">                                                                                      </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">If an included document fragment contains section structure, the title adornments must match those of the master </span>
-<span class="r2">document.</span>
+<span class="r2">document.Standard data files intended for inclusion in reStructuredText documents are distributed with the Docutils </span>
+<span class="r2">source code, located in the &quot;docutils&quot; package in the </span><span class="r17">docutils/parsers/rst/include</span><span class="r2"> directory.  To access these files, </span>
+<span class="r2">use the special syntax for standard &quot;include&quot; data files, angle brackets around the file name:</span>
 
-<span class="r2">Standard data files intended for inclusion in reStructuredText documents are distributed with the Docutils source code, </span>
-<span class="r2">located in the &quot;docutils&quot; package in the </span><span class="r17">docutils/parsers/rst/include</span><span class="r2"> directory.  To access these files, use the special</span>
-<span class="r2">syntax for standard &quot;include&quot; data files, angle brackets around the file name:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> include:: </span><span class="r4">&lt;</span><span class="r6">isonum</span><span class="r4">.</span><span class="r6">txt</span><span class="r4">&gt;</span><span class="r5">                                                                                           </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">The current set of standard &quot;include&quot; data files consists of sets of substitution definitions.  See </span><span class="r8">reStructuredText </span>
-<span class="r8">Standard Definition Files</span><span class="r2"> for details.</span>
-
-<span class="r2">The following options are recognized:</span>
+<span class="r8">Standard Definition Files</span><span class="r2"> for details.The following options are recognized:</span>
 
     start-line : <span class="r13">integer</span>
       Only the content starting from this line will be included. (As usual in Python, the first line has index 0 and 
@@ -1358,15 +1376,18 @@ tab_width configuration setting.
 <span class="r22">╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
 <span class="r2">The &quot;raw&quot; directive indicates non-reStructuredText data that is to be passed untouched to the Writer.  The names of the </span>
 <span class="r2">output formats are given in the directive arguments.  The interpretation of the raw data is up to the Writer.  A Writer </span>
-<span class="r2">may ignore any raw output not matching its format.</span>
+<span class="r2">may ignore any raw output not matching its format.For example, the following input would be passed untouched by an HTML </span>
+<span class="r2">Writer:</span>
 
-<span class="r2">For example, the following input would be passed untouched by an HTML Writer:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> raw:: html</span><span class="r5">                                                                                                       </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   </span><span class="r4">&lt;</span><span class="r6">hr width</span><span class="r4">=</span><span class="r12">50</span><span class="r6"> size</span><span class="r4">=</span><span class="r12">10</span><span class="r4">&gt;</span><span class="r5">                                                                                            </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">A LaTeX Writer could insert the following raw content into its output stream:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> raw:: latex</span><span class="r5">                                                                                                      </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
@@ -1374,13 +1395,14 @@ tab_width configuration setting.
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">Raw data can also be read from an external file, specified in a directive option.  In this case, the content block must </span>
 <span class="r2">be empty.  For example:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> raw:: html</span><span class="r5">                                                                                                       </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :file: inclusion</span><span class="r4">.</span><span class="r6">html</span><span class="r5">                                                                                            </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
-<span class="r2">Inline equivalents of the &quot;raw&quot; directive can be defined via </span><span class="r8">custom interpreted text roles</span><span class="r2"> derived from the </span><a class="r8" href="roles.html#raw">&quot;raw&quot; role</a><span class="r2">.</span>
-
-<span class="r2">The following options are recognized:</span>
+<span class="r2">Inline equivalents of the &quot;raw&quot; directive can be defined via </span><span class="r8">custom interpreted text roles</span><span class="r2"> derived from the </span><a class="r8" href="roles.html#raw">&quot;raw&quot; </a>
+<a class="r8" href="roles.html#raw">role</a><span class="r2">.The following options are recognized:</span>
 
     file : <span class="r13">string (newlines removed)</span>
       The local filesystem path of a raw data file to be included.
@@ -1411,9 +1433,9 @@ tab_width configuration setting.
 └─────────────────────┴──────────────────────────────────────────────────┘
 <span class="r2">The &quot;class&quot; directive sets the </span><span class="r8">&quot;classes&quot;</span><span class="r2"> attribute value on its content or on the first immediately following  </span>
 <span class="r2">non-comment element . The directive argument consists of one or more space-separated class names. The names are </span>
-<span class="r2">transformed to conform to the regular expression </span><span class="r17">[a-z](-?[a-z0-9]+)*</span><span class="r2"> (see </span><span class="r8">Identifier Normalization</span><span class="r2"> below).</span>
+<span class="r2">transformed to conform to the regular expression </span><span class="r17">[a-z](-?[a-z0-9]+)*</span><span class="r2"> (see </span><span class="r8">Identifier Normalization</span><span class="r2"> below).Examples:</span>
 
-<span class="r2">Examples:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> class:: special</span><span class="r5">                                                                                                  </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r5">                                                                                                                    </span> <span class="r3">│</span>
@@ -1433,6 +1455,8 @@ tab_width configuration setting.
 <span class="r3">│</span> <span class="r6">   Second paragraph</span><span class="r4">.</span><span class="r5">                                                                                                </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">The text above is parsed and transformed into this doctree fragment:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> code</span><span class="r4">-</span><span class="r6">block:: xml</span><span class="r5">                                                                                                 </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
@@ -1447,31 +1471,30 @@ tab_width configuration setting.
 <span class="r2">Docutils </span><a class="r8" href="../doctree.html#classnames-type">class names</a><span class="r2"> and </span><a class="r8" href="../doctree.html#ids-type">identifier keys</a><span class="r2"> are normalized to conform to the regular expression &quot;</span><span class="r17">[a-z](-?[a-z0-9]+)*</span><span class="r2">&quot; by </span>
 <span class="r2">converting</span>
 
-<span class="r10"> • </span>alphabetic characters to lowercase,
-<span class="r10"> • </span>accented characters to the base character,
-<span class="r10"> • </span>non-alphanumeric characters to hyphens,
-<span class="r10"> • </span>consecutive hyphens into one hyphen
+<span class="r10"> • alphabetic characters to lowercase,</span>
+<span class="r10"> • accented characters to the base character,</span>
+<span class="r10"> • non-alphanumeric characters to hyphens,</span>
+<span class="r10"> • consecutive hyphens into one hyphen</span>
 
 <span class="r2">and stripping</span>
 
-<span class="r10"> • </span>leading hyphens and number characters, and
-<span class="r10"> • </span>trailing hyphens.
+<span class="r10"> • leading hyphens and number characters, and</span>
+<span class="r10"> • trailing hyphens.</span>
 
 <span class="r2">For example </span><span class="r17">&quot;Rot.Gelb&amp;GrÃ¼n:+2008&quot;</span><span class="r2"> becomes </span><span class="r17">&quot;rot-gelb-grun-2008&quot;</span><span class="r2"> and </span><span class="r17">&quot;1000_Steps!&quot;</span><span class="r2"> becomes </span><span class="r17">&quot;steps&quot;</span><span class="r2">.</span>
 
 <span class="r1">╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗</span>
 <span class="r1">║                                                      Rationale:                                                      ║</span>
 <span class="r1">╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝</span>
-<span class="r2">Identifier keys must be valid in all supported output formats.</span>
+<span class="r2">Identifier keys must be valid in all supported output formats.For HTMLÂ 4.1 + CSS1 compatibility, identifiers should </span>
+<span class="r2">have no underscores, colons, or periods.  Hyphens may be used.</span>
 
-<span class="r2">For HTMLÂ 4.1 + CSS1 compatibility, identifiers should have no underscores, colons, or periods.  Hyphens may be used.</span>
-
-<span class="r10"> • </span>The HTML 4.01 spec defines identifiers based on SGML tokens:  ID and NAME tokens must begin with a letter ([A-Za-z]) 
-may be followed by any number of letters, digits ([0-9]), hyphens (&quot;-&quot;), underscores (&quot;_&quot;), colons (&quot;:&quot;), and periods 
-(&quot;.&quot;).  https://www.w3.org/TR/html401/types.html#type-name
-<span class="r10"> • </span>The CSS1 spec defines identifiers based on the &quot;name&quot; token (&quot;flex&quot; tokenizer notation below; &quot;latin1&quot; and &quot;escape&quot; 
-8-bit characters have been replaced with XML entities):  unicode     \\[0-9a-f]{1,4} latin1      [&amp;iexcl;-&amp;yuml;] escape
-{unicode}|\\[ -~&amp;iexcl;-&amp;yuml;] nmchar      [-A-Za-z0-9]|{latin1}|{escape} name        {nmchar}+
+<span class="r10"> • The HTML 4.01 spec defines identifiers based on SGML tokens:  ID and NAME tokens must begin with a letter ([A-Za-z]) </span>
+<span class="r10">and may be followed by any number of letters, digits ([0-9]), hyphens (&quot;-&quot;), underscores (&quot;_&quot;), colons (&quot;:&quot;), and </span>
+<span class="r10">periods (&quot;.&quot;).  https://www.w3.org/TR/html401/types.html#type-name</span>
+<span class="r10"> • The CSS1 spec defines identifiers based on the &quot;name&quot; token (&quot;flex&quot; tokenizer notation below; &quot;latin1&quot; and &quot;escape&quot; </span>
+<span class="r10">8-bit characters have been replaced with XML entities):  unicode     \\[0-9a-f]{1,4} latin1      [&amp;iexcl;-&amp;yuml;] escape</span>
+<span class="r10">{unicode}|\\[ -~&amp;iexcl;-&amp;yuml;] nmchar      [-A-Za-z0-9]|{latin1}|{escape} name        {nmchar}+</span>
 
 <span class="r2">The CSS1 rule requires underscores (&quot;_&quot;), colons (&quot;:&quot;), and periods (&quot;.&quot;) to be escaped , therefore </span><span class="r8">&quot;classes&quot;</span><span class="r2"> and </span><a class="r8" href="../doctree.html#ids">&quot;ids&quot;</a><span class="r2"> </span>
 <span class="r2">attributes should not contain these characters.  Combined with HTML4.1 requirements (the first character must be a </span>
@@ -1497,14 +1520,20 @@ may be followed by any number of letters, digits ([0-9]), hyphens (&quot;-&quot;
 └─────────────────────┴─────────────────────────────────────────────────┘
 <span class="r2">The &quot;role&quot; directive dynamically creates a custom </span><a class="r8" href="roles.html">interpreted text role</a><span class="r2"> and registers it with the parser.  This means </span>
 <span class="r2">that after declaring a role like this:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> role:: custom</span><span class="r5">                                                                                                    </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">the document may use the new &quot;custom&quot; role:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r6">An example of using :custom:</span><span class="r9">`</span><span class="r6">interpreted text</span><span class="r9">`</span><span class="r5">                                                                      </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">This will be parsed into the following document tree fragment:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> code</span><span class="r4">-</span><span class="r6">block:: xml</span><span class="r5">                                                                                                 </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
@@ -1521,6 +1550,8 @@ may be followed by any number of letters, digits ([0-9]), hyphens (&quot;-&quot;
 <span class="r3">│</span> <span class="r6">:custom:</span><span class="r9">`</span><span class="r6">text</span><span class="r9">`</span><span class="r5">                                                                                                      </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">The parsed result is as follows:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> code</span><span class="r4">-</span><span class="r6">block:: xml</span><span class="r5">                                                                                                 </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
@@ -1535,10 +1566,10 @@ may be followed by any number of letters, digits ([0-9]), hyphens (&quot;-&quot;
 <span class="r3">│</span> <span class="r6">:raw</span><span class="r4">-</span><span class="r6">role:</span><span class="r9">`</span><span class="r6">raw text</span><span class="r9">`</span><span class="r5">                                                                                                </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">If no base role is explicitly specified, a generic custom role is automatically used.  Subsequent interpreted text will </span>
-<span class="r2">produce an &quot;inline&quot; element with a </span><a class="r8" href="../doctree.html#classes">&quot;classes&quot;</a><span class="r2"> attribute, as in the first example above.</span>
+<span class="r2">produce an &quot;inline&quot; element with a </span><a class="r8" href="../doctree.html#classes">&quot;classes&quot;</a><span class="r2"> attribute, as in the first example above.With most roles, the &quot;:class:&quot; </span>
+<span class="r2">option can be used to set a &quot;classes&quot; attribute that is different from the role name.  For example:</span>
 
-<span class="r2">With most roles, the &quot;:class:&quot; option can be used to set a &quot;classes&quot; attribute that is different from the role name.  </span>
-<span class="r2">For example:</span>
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> role:: custom</span><span class="r5">                                                                                                    </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :class: special</span><span class="r5">                                                                                                  </span> <span class="r3">│</span>
@@ -1546,6 +1577,8 @@ may be followed by any number of letters, digits ([0-9]), hyphens (&quot;-&quot;
 <span class="r3">│</span> <span class="r6">:custom:</span><span class="r9">`</span><span class="r6">interpreted text</span><span class="r9">`</span><span class="r5">                                                                                          </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">This is the parsed result:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> code</span><span class="r4">-</span><span class="r6">block:: xml</span><span class="r5">                                                                                                 </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
@@ -1576,14 +1609,20 @@ argument (role name) as the value is implied.  See the class directive above.
 └─────────────────────┴────────────────────────────────────────┘
 <span class="r2">The &quot;default-role&quot; directive sets the default interpreted text role, the role that is used for interpreted text without </span>
 <span class="r2">an explicit role. For example, after setting the default role like this:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> default</span><span class="r4">-</span><span class="r6">role:: subscript</span><span class="r5">                                                                                         </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">any subsequent use of implicit-role interpreted text in the document will use the &quot;subscript&quot; role:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r6">An example of a </span><span class="r9">`</span><span class="r6">default</span><span class="r9">`</span><span class="r6"> role</span><span class="r4">.</span><span class="r5">                                                                                     </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">This will be parsed into the following document tree fragment</span>
+
+
 <span class="r3">┌──────────────────────────────────────────────────────── xml ─────────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">&lt;paragraph&gt;</span><span class="r5">                                                                                                         </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">    An example of a</span><span class="r5">                                                                                                 </span> <span class="r3">│</span>
@@ -1592,9 +1631,8 @@ argument (role name) as the value is implied.  See the class directive above.
 <span class="r3">│</span> <span class="r6">     role.</span><span class="r5">                                                                                                          </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">Custom roles may be used (see the &quot;</span><span class="r8">role</span><span class="r2">&quot; directive above), but it must have been declared in a document before it can be</span>
-<span class="r2">set as the default role.  See the </span><span class="r8">reStructuredText Interpreted Text Roles</span><span class="r2"> document for details of built-in roles.</span>
-
-<span class="r2">The directive may be used without an argument to restore the initial default interpreted text role, which is </span>
+<span class="r2">set as the default role.  See the </span><span class="r8">reStructuredText Interpreted Text Roles</span><span class="r2"> document for details of built-in roles.The </span>
+<span class="r2">directive may be used without an argument to restore the initial default interpreted text role, which is </span>
 <span class="r2">application-dependent.  The initial default interpreted text role of the standard reStructuredText parser is </span>
 <span class="r2">&quot;title-reference&quot;.</span>
 
@@ -1626,12 +1664,16 @@ argument (role name) as the value is implied.  See the class directive above.
 <span class="r2">Within the directive block, a flat field list provides the syntax for metadata.  The field name becomes the contents of </span>
 <span class="r2">the &quot;name&quot; attribute of the META tag, and the field body (interpreted as a single string without inline markup) becomes </span>
 <span class="r2">the contents of the &quot;content&quot; attribute.  For example:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> meta::</span><span class="r5">                                                                                                           </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :description: The reStructuredText plaintext markup language</span><span class="r5">                                                     </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :keywords: plaintext, markup language</span><span class="r5">                                                                            </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">This would be converted to the following HTML</span>
+
+
 <span class="r3">┌──────────────────────────────────────────────────────── html ────────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r6">&lt;</span><span class="r4">meta</span><span class="r6"> </span><span class="r11">name</span><span class="r4">=</span><span class="r7">&quot;description&quot;</span><span class="r5">                                                                                            </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">    </span><span class="r11">content</span><span class="r4">=</span><span class="r7">&quot;The reStructuredText plaintext markup language&quot;</span><span class="r6">&gt;</span><span class="r5">                                                       </span> <span class="r3">│</span>
@@ -1639,23 +1681,31 @@ argument (role name) as the value is implied.  See the class directive above.
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">Support for other META attributes (&quot;http-equiv&quot;, &quot;scheme&quot;, &quot;lang&quot;, &quot;dir&quot;) are provided through field arguments, which </span>
 <span class="r2">must be of the form &quot;attr=value&quot;:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> meta::</span><span class="r5">                                                                                                           </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :description lang</span><span class="r4">=</span><span class="r6">en: An amusing story</span><span class="r5">                                                                           </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :description lang</span><span class="r4">=</span><span class="r6">fr: Une histoire amusante</span><span class="r5">                                                                      </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">And their HTML equivalents</span>
+
+
 <span class="r3">┌──────────────────────────────────────────────────────── html ────────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r6">&lt;</span><span class="r4">meta</span><span class="r6"> </span><span class="r11">name</span><span class="r4">=</span><span class="r7">&quot;description&quot;</span><span class="r6"> </span><span class="r11">lang</span><span class="r4">=</span><span class="r7">&quot;en&quot;</span><span class="r6"> </span><span class="r11">content</span><span class="r4">=</span><span class="r7">&quot;An amusing story&quot;</span><span class="r6">&gt;</span><span class="r5">                                                      </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">&lt;</span><span class="r4">meta</span><span class="r6"> </span><span class="r11">name</span><span class="r4">=</span><span class="r7">&quot;description&quot;</span><span class="r6"> </span><span class="r11">lang</span><span class="r4">=</span><span class="r7">&quot;fr&quot;</span><span class="r6"> </span><span class="r11">content</span><span class="r4">=</span><span class="r7">&quot;Une histoire amusante&quot;</span><span class="r6">&gt;</span><span class="r5">                                                 </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">Some META tags use an &quot;http-equiv&quot; attribute instead of the &quot;name&quot; attribute.  To specify &quot;http-equiv&quot; META tags, simply</span>
 <span class="r2">omit the name:</span>
+
+
 <span class="r3">┌─────────────────────────────────────────────────────── python ───────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r4">..</span><span class="r6"> meta::</span><span class="r5">                                                                                                           </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">   :http</span><span class="r4">-</span><span class="r6">equiv</span><span class="r4">=</span><span class="r6">Content</span><span class="r4">-</span><span class="r6">Type: text</span><span class="r4">/</span><span class="r6">html; charset</span><span class="r4">=</span><span class="r6">ISO</span><span class="r4">-</span><span class="r12">8859</span><span class="r4">-</span><span class="r12">1</span><span class="r5">                                                          </span> <span class="r3">│</span>
 <span class="r3">└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</span>
 <span class="r2">HTML equivalent</span>
+
+
 <span class="r3">┌──────────────────────────────────────────────────────── html ────────────────────────────────────────────────────────┐</span>
 <span class="r3">│</span> <span class="r6">&lt;</span><span class="r4">meta</span><span class="r6"> </span><span class="r11">http-equiv</span><span class="r4">=</span><span class="r7">&quot;Content-Type&quot;</span><span class="r5">                                                                                     </span> <span class="r3">│</span>
 <span class="r3">│</span> <span class="r6">     </span><span class="r11">content</span><span class="r4">=</span><span class="r7">&quot;text/html; charset=ISO-8859-1&quot;</span><span class="r6">&gt;</span><span class="r5">                                                                       </span> <span class="r3">│</span>
@@ -1714,28 +1764,28 @@ references to the element using text as reference name.  Specifying the name opt
 bild.png    :name: my picture  is a concise syntax alternative to preceding it with a hyperlink target  .. _my picture: 
 .. image:: bild.png
 <span class="r23">╭───────────────────────────────── System Message: INFO/1 (&lt;rst-document&gt;, line 982); ─────────────────────────────────╮</span>
-<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">982</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Target name overrides implicit target name <span class="r25">&quot;contents&quot;</span>.                                  <span class="r23">│</span>
+<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">982</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Duplicate implicit target name: <span class="r25">&quot;contents&quot;</span>.                                             <span class="r23">│</span>
 <span class="r23">╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
 <span class="r23">╭──────────────────────────────── System Message: INFO/1 (&lt;rst-document&gt;, line 1965); ─────────────────────────────────╮</span>
-<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">1965</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Target name overrides implicit target name <span class="r25">&quot;class&quot;</span>.                                    <span class="r23">│</span>
+<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">1965</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Duplicate implicit target name: <span class="r25">&quot;class&quot;</span>.                                               <span class="r23">│</span>
 <span class="r23">╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
 <span class="r23">╭──────────────────────────────── System Message: INFO/1 (&lt;rst-document&gt;, line 2006); ─────────────────────────────────╮</span>
-<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2006</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Target name overrides implicit target name <span class="r25">&quot;figure&quot;</span>.                                   <span class="r23">│</span>
+<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2006</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Duplicate implicit target name: <span class="r25">&quot;figure&quot;</span>.                                              <span class="r23">│</span>
 <span class="r23">╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
 <span class="r23">╭──────────────────────────────── System Message: INFO/1 (&lt;rst-document&gt;, line 2010); ─────────────────────────────────╮</span>
-<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2010</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Target name overrides implicit target name <span class="r25">&quot;image&quot;</span>.                                    <span class="r23">│</span>
+<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2010</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Duplicate implicit target name: <span class="r25">&quot;image&quot;</span>.                                               <span class="r23">│</span>
 <span class="r23">╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
 <span class="r23">╭──────────────────────────────── System Message: INFO/1 (&lt;rst-document&gt;, line 2022); ─────────────────────────────────╮</span>
-<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2022</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Target name overrides implicit target name <span class="r25">&quot;rubric&quot;</span>.                                   <span class="r23">│</span>
+<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2022</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Duplicate implicit target name: <span class="r25">&quot;rubric&quot;</span>.                                              <span class="r23">│</span>
 <span class="r23">╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
 <span class="r23">╭──────────────────────────────── System Message: INFO/1 (&lt;rst-document&gt;, line 2023); ─────────────────────────────────╮</span>
-<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2023</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Target name overrides implicit target name <span class="r25">&quot;sidebar&quot;</span>.                                  <span class="r23">│</span>
+<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2023</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Duplicate implicit target name: <span class="r25">&quot;sidebar&quot;</span>.                                             <span class="r23">│</span>
 <span class="r23">╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
 <span class="r23">╭──────────────────────────────── System Message: INFO/1 (&lt;rst-document&gt;, line 2024); ─────────────────────────────────╮</span>
-<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2024</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Target name overrides implicit target name <span class="r25">&quot;table&quot;</span>.                                    <span class="r23">│</span>
+<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2024</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Duplicate implicit target name: <span class="r25">&quot;table&quot;</span>.                                               <span class="r23">│</span>
 <span class="r23">╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
 <span class="r23">╭──────────────────────────────── System Message: INFO/1 (&lt;rst-document&gt;, line 2027); ─────────────────────────────────╮</span>
-<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2027</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Target name overrides implicit target name <span class="r25">&quot;topic&quot;</span>.                                    <span class="r23">│</span>
+<span class="r23">│</span> <span class="r1">&lt;</span><span class="r24">rst-document</span><span class="r1">&gt;</span>:<span class="r23">2027</span>: <span class="r1">(</span>INFO/<span class="r23">1</span><span class="r1">)</span> Duplicate implicit target name: <span class="r25">&quot;topic&quot;</span>.                                               <span class="r23">│</span>
 <span class="r23">╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
 <span class="r26">┌─────────────────────────────────────────────────────── Footer ───────────────────────────────────────────────────────┐</span>
 <span class="r26">│</span>                            &quot;Metadata&quot; is data about data, in this case data about the                                <span class="r26">│</span>

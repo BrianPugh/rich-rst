@@ -220,7 +220,7 @@ class RSTVisitor(docutils.nodes.SparseNodeVisitor):
     def depart_paragraph(self, node):  # pylint: disable=unused-argument
         if self.renderables and isinstance(self.renderables[-1], Text):
             if len(self.renderables[-1].end) == 0:
-                self.renderables[-1].append("\n\n")
+                self.renderables[-1].end = "\n\n"
 
     def visit_title(self, node):
         style = self.console.get_style("restructuredtext.title", default="bold")
@@ -342,24 +342,24 @@ class RSTVisitor(docutils.nodes.SparseNodeVisitor):
         # TODO: I need to figure out some way to handle nested lists recursively
         marker_style = self.console.get_style("restructuredtext.bullet_list_marker", default="bold yellow")
         text_style = self.console.get_style("restructuredtext.bullet_list_text", default="none")
-        for list_item in node.children:
-            nested_list = [i for i in list_item.children if isinstance(i, docutils.nodes.bullet_list)]
+        for i, list_item in enumerate(node.children):
+            nested_list = [nested for nested in list_item.children if isinstance(nested, docutils.nodes.bullet_list)]
             if nested_list:
                 for list_item in list_item.children:
                     # Combine marker and text into single Text object for proper table rendering
-                    combined = Text("  ")
+                    combined = Text("  ", end="\n")
                     combined.append(" ∘ ", style=marker_style)
                     combined.append(list_item.astext().replace("\n", " "), style=text_style)
                     self.renderables.append(combined)
                     if isinstance(list_item, docutils.nodes.bullet_list):
                         for list_item in list_item.children:
                             # Combine marker and text into single Text object for proper table rendering
-                            combined = Text("    ")
+                            combined = Text("    ", end="\n")
                             combined.append(" ▪ ", style=marker_style)
                             combined.append(list_item.astext().replace("\n", " "), style=text_style)
                             self.renderables.append(combined)
             # Combine marker and text into single Text object for proper table rendering
-            combined = Text(" • ", style=marker_style)
+            combined = Text(" • ", style=marker_style, end="\n")
             combined.append(list_item.astext().replace("\n", " "), style=text_style)
             self.renderables.append(combined)
         self.renderables.append(NewLine())
@@ -370,7 +370,7 @@ class RSTVisitor(docutils.nodes.SparseNodeVisitor):
         text_style = self.console.get_style("restructuredtext.enumerated_text", default="none")
         for i, list_item in enumerate(node.children, 1):
             # Combine marker and text into single Text object for proper table rendering
-            combined = Text(f" {i} ", style=marker_style)
+            combined = Text(f" {i} ", style=marker_style, end="\n")
             combined.append(list_item.astext().replace("\n", " "), style=text_style)
             self.renderables.append(combined)
 
