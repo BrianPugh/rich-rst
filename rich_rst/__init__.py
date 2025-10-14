@@ -346,14 +346,22 @@ class RSTVisitor(docutils.nodes.SparseNodeVisitor):
             nested_list = [i for i in list_item.children if isinstance(i, docutils.nodes.bullet_list)]
             if nested_list:
                 for list_item in list_item.children:
-                    self.renderables.append(Text("  ", end="") + Text(" ∘ ", end="", style=marker_style))
-                    self.renderables.append(Text(list_item.astext().replace("\n", " "), style=text_style))
+                    # Combine marker and text into single Text object for proper table rendering
+                    combined = Text("  ")
+                    combined.append(" ∘ ", style=marker_style)
+                    combined.append(list_item.astext().replace("\n", " "), style=text_style)
+                    self.renderables.append(combined)
                     if isinstance(list_item, docutils.nodes.bullet_list):
                         for list_item in list_item.children:
-                            self.renderables.append(Text("    ", end="") + Text(" ▪ ", end="", style=marker_style))
-                            self.renderables.append(Text(list_item.astext().replace("\n", " "), style=text_style))
-            self.renderables.append(Text(" • ", end="", style=marker_style))
-            self.renderables.append(Text(list_item.astext().replace("\n", " "), style=text_style))
+                            # Combine marker and text into single Text object for proper table rendering
+                            combined = Text("    ")
+                            combined.append(" ▪ ", style=marker_style)
+                            combined.append(list_item.astext().replace("\n", " "), style=text_style)
+                            self.renderables.append(combined)
+            # Combine marker and text into single Text object for proper table rendering
+            combined = Text(" • ", style=marker_style)
+            combined.append(list_item.astext().replace("\n", " "), style=text_style)
+            self.renderables.append(combined)
         self.renderables.append(NewLine())
         raise docutils.nodes.SkipChildren()
 
@@ -361,8 +369,10 @@ class RSTVisitor(docutils.nodes.SparseNodeVisitor):
         marker_style = self.console.get_style("restructuredtext.enumerated_list_marker", default="bold yellow")
         text_style = self.console.get_style("restructuredtext.enumerated_text", default="none")
         for i, list_item in enumerate(node.children, 1):
-            self.renderables.append(Text(f" {i}", end=" ", style=marker_style))
-            self.renderables.append(Text(list_item.astext().replace("\n", " "), style=text_style))
+            # Combine marker and text into single Text object for proper table rendering
+            combined = Text(f" {i} ", style=marker_style)
+            combined.append(list_item.astext().replace("\n", " "), style=text_style)
+            self.renderables.append(combined)
 
         self.renderables.append(NewLine())
         raise docutils.nodes.SkipChildren()
